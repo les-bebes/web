@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <style>
+      .grades-a {
+        color: green;
+      }
+      .grades-b {
+        color: yellowgreen;
+      }
+      .grades-c {
+        color: orange;
+      }
+      .grades-d {
+        color: rgba(255, 68, 0, 0.774);
+      }
+      .grades-e {
+        color: red;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <title>Résultat</title>
+  </head>
+  <body>
+    {%for produit in produits%}
+    <p class="grades-{{produit['nutrition_grades']}}">
+      {{produit["generic_name_fr"]}}
+    </p>
+    {%endfor%}
+  </body>
+</html>
